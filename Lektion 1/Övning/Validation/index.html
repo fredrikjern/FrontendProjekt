@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Register Service</title>
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <form id="registerform" class="registerform" novalidate>
+        <ul>
+            <li>
+                <label for="servicename">Tjänstens namn</label>
+                <input type="text" id="servicename" name="servicename" minlength="5" required>
+                <span class="error" id="servicenameError">Du måste fylla i ett namn:-</span>
+
+            </li>
+            <li>
+                <label for="description">Beskrivning</label>
+                <input type="text" id="description" name="description" maxlength="200" required>
+                <span class="error" id="descriptionError">Lugna dig, 200 är mer än nog</span>
+
+            </li>
+            <li>
+                <label for="price">Kostnad</label>
+                <input type="number" id="price" name="price" min="1" step="any" required>
+                <span class="error" id="priceerror">Du måste fylla i en kostnad</span>
+
+            </li>
+            <li>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailerror">Du måste fylla i en E-mail</span>
+
+            </li>
+            <li>
+                <label for="phone">Telefonnr</label>
+                <input type="tel" id="phone" name="phone">
+            </li>
+            <li>
+                <label for="url">URL</label>
+                <input type="url" id="url" name="url">
+            </li>
+            <li>
+                <label for="accept">Accepterar Villkoren</label>
+                <input type="checkbox" id="accept" name="accept" required>
+                <span class="error" id="accepterror">Du måste acceptera Vilkoren</span>
+
+            </li>
+            <li>
+                <button>Submit</button>
+            </li>
+        </ul>
+    </form>
+</body>
+
+</html>
