@@ -28,9 +28,14 @@ const allMessagesList = document.getElementById("allMessages");
 latestMessageHolder.innerText = getLastMessage(messages);
 
 showAllMessagesBtn.addEventListener("click", function () {
-  messages.forEach(function (message) {
+  let segassem = messages.reverse();
+  segassem.forEach(function (message) { //Oklart om jag fattat uppgiften rätt men den visar senaste
     const li = document.createElement("li");
     li.innerText = `${message.time}: ${message.text}`;
     allMessagesList.appendChild(li);
   });
 });
+
+//2. Meddelande i fel ordning
+//I bug02 finns “latestMessage” och där skall det senaste meddelandet synas, och klickar användaren på “Show”-knappen skall alla meddelanden visas.
+//Tyvärr kommer meddelandena i FEL ORDNING. Lös buggen
