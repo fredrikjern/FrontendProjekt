@@ -16,7 +16,7 @@ const messages = [
   },
 ];
 
-function getLastMessage(arr) {
+function getLastMessage(arr) { // En bättre lösning hade varit a clona arrayen innan reverse så slipper vi vända tillbaka den sen
   arr.reverse();
   return arr[0].text;
 }

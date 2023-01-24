@@ -1,0 +1,16 @@
+h2 {
+    font-weight: bold;
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+.bot {
+    color: red;
+}
+
+.user {
+    color: green;
+}
