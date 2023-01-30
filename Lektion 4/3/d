@@ -1,0 +1,10 @@
+Det finns en fake-butik med ett öppet API man kan läsa ifrån för att öva på att använda sig av saker som fetch(), som heter FakeStore API:
+
+https://fakestoreapi.com/docs
+
+Du ska nu läsa produkt-data från detta API och visa informationen på en HTML-sida.
+
+Du kan läsa produktinformation från: https://fakestoreapi.com/products
+Då får du en JSON med produktinformation såsom namn, beskrivning, pris och bild. 
+
+Hämta informationen med fetch(), och skapa en UL där varje produkt visas i en egen LI med namn, beskrivning, pris och bild. Lägg gärna till lite styling!
