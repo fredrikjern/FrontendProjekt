@@ -6,22 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo</title>
     <link rel="stylesheet" href="style.css">
-    <script src="index.js" defer></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Fredriks To do</h1>
+            <h1>Fredriks Test</h1>
         </header>
         <main>
+            <form id="list-search">
+                <label for="list-name">Listname</label>
+                <input id="list-name" type="text">
+                <button>Search</button>
+            </form>
 
-            <h2>Min lista</h2>
-            <input type="text" id="add">
-            <button class="addItemButton" type="button">Lägg till item</button>
-            <ul class="list">
-                <li>item1</li>
-            </ul>
-           </div>
+            <ul id="lists"></ul>
+            
+            <form id="add-item"><h2>Lägg till:</h2>
+                <label for="item-title">Title:</label>
+                <input id="item-title" type="text">
+                <br>
+                <label for="item-desc">Description:</label>
+                <textarea id="item-desc"></textarea>
+                <br>
+                <button>Lägg till</button>
+            </form>
+
+            <section>
+                <ul id="item-list"></ul>
+            </section>
         </main>
         <footer></footer>
     </div>
