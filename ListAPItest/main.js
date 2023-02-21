@@ -12,6 +12,14 @@ const itemDescField = document.querySelector("#item-desc");
 const updateListForm = document.querySelector("#update-list");
 
 let currentList = "";
+async function deleteGame(gameID) {
+  const res = await fetch(
+    `https://nackademin-item-tracker.herokuapp.com/lists/${gameID}`,
+    {
+      method: "DELETE",
+    }
+  );
+}
 
 function createItem(item) {
   const liElem = document.createElement("li"); //
@@ -80,6 +88,11 @@ function drawLists(lists) {
     chooseListBtn.innerText = "Choose";
     liElem.appendChild(chooseListBtn);
     listsHolder.appendChild(liElem);
+    
+    const deleteListBtn = document.createElement("button");
+    deleteListBtn.innerText = "delete";
+    liElem.appendChild(deleteListBtn);
+    listsHolder.appendChild(liElem);
 
     chooseListBtn.addEventListener("click", function () {
       console.log("choose klick   current list:  " + toString(list));
@@ -88,6 +101,10 @@ function drawLists(lists) {
       //listnameOutput.value = list.listname;
       drawItems(list.itemList);
       listsHolder.innerHTML = "";
+    });
+    deleteListBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      deleteGame(list._id)
     });
   });
 }
@@ -99,6 +116,7 @@ listSearchForm.addEventListener("submit", async function (e) {
   const res = await fetch(`${API_BASE}listsearch?listname=${query}`);
   const data = await res.json();
   console.log("Sök");
+  console.log(data);
   drawLists(data);
 });
 addItemForm.addEventListener("submit", async function (e) {
